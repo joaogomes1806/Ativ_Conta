@@ -1,24 +1,29 @@
-public class Conta{
+
+package javaapplication1;
+
+
+public class Conta {
+  
 
 private int numero;
 private double saldo;
 private String nome;
 
-public conta(int numero, String nome){
+public Conta(int numero, String nome){
     this.numero = numero;
     this.nome = nome;
-    this.saldo = 0.0
+    this.saldo = 0.0;
 }
 public void depositar(double valor ){
     if (valor > 0){
         this.saldo =+ valor;
     }
 }
-public bollean sacar(double valor){
+public boolean sacar(double valor){
     if(valor > 0 && this.saldo >= valor){
         return true;
     }
-    return false
+    return false;
 }
 public double consultarSaldo(){
     return this.saldo;
@@ -29,3 +34,4 @@ public void exibirDados(){
       System.out.println("Saldo Atual: R$"+ this.saldo);
 }
 }
+
